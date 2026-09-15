@@ -1,0 +1,520 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#121212">
+    <meta name="description" content="طرح‌های مشاوره دکتر میرهلی و برنامه‌ریزی تخصصی کنکور">
+    <title>طرح‌های مشاوره دکتر میرهلی | برنامه‌ریزی تخصصی کنکور تا رتبه برتر</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --page-background: #121212;
+            --card-background: #1d1d1d;
+            --text-color: #e0e0e0;
+            --text-color-secondary: #a0a0a0;
+            --accent-gold: #D4AF37;
+            --accent-gold-bright: #FFF8E7;
+            --accent-gold-darker: #b8860b;
+            --accent-gold-glow: rgba(212, 175, 55, 0.1);
+            --accent-gold-glow-hover: rgba(212, 175, 55, 0.2);
+            --accent-gold-border: rgba(212, 175, 55, 0.3);
+            --success-color: #27ae60;
+            --telegram-blue: #0088cc;
+            --discount-red: #e74c3c;
+        }
+
+        /* --- Animations --- */
+        @keyframes rotate-diamond { 0% { transform: rotateY(0deg) scale(1); } 50% { transform: rotateY(180deg) scale(1.1); } 100% { transform: rotateY(360deg) scale(1); } }
+        @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+        @keyframes pulse { 0%, 100% { opacity: 0.7; transform: scale(1); } 50% { opacity: 1; transform: scale(1.1); } }
+        @keyframes jiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(5deg); } 75% { transform: rotate(-5deg); } }
+        @keyframes twinkle { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+        @keyframes think-wobble { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-4deg); } 75% { transform: rotate(4deg); } }
+        @keyframes takeoff { 0%, 100% { transform: translateY(0) rotate(-5deg); } 50% { transform: translateY(-5px) rotate(5deg); } }
+
+        @keyframes shine-sweep-vertical {
+            0% { transform: translateY(-120%) skewY(-20deg); }
+            100% { transform: translateY(120%) skewY(-20deg); }
+        }
+
+        @keyframes flash-gold-title {
+            0%, 40%, 100% { color: var(--accent-gold); text-shadow: none; }
+            50% { color: var(--accent-gold-bright); text-shadow: 0 0 12px var(--accent-gold-bright); }
+        }
+
+        @keyframes fast-luxury-flash {
+            0%, 100% { box-shadow: 0 0 35px var(--accent-gold-glow); border-color: var(--accent-gold-border); }
+            50% { box-shadow: 0 0 50px rgba(255, 248, 231, 0.4); border-color: rgba(255, 248, 231, 0.7); }
+        }
+
+        .animated-emoji { display: inline-block; vertical-align: middle; font-size: 1.1em; margin-left: 8px; }
+        .animated-emoji.diamond { animation: rotate-diamond 10s linear infinite; color: var(--accent-gold); }
+        .animated-emoji.trophy { animation: bob 3s ease-in-out infinite; }
+        .animated-emoji.lightbulb { animation: pulse 2.5s ease-in-out infinite; }
+        .animated-emoji.puzzle { animation: jiggle 4s ease-in-out infinite; }
+        .animated-emoji.sparkles { animation: twinkle 2s ease-in-out infinite; }
+        .animated-emoji.faq { animation: think-wobble 3s ease-in-out infinite; }
+        .animated-emoji.rocket { animation: takeoff 2s ease-in-out infinite; }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.8;
+            background-color: var(--page-background);
+            background-image: 
+                repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 1px, transparent 1px, transparent 20px),
+                repeating-linear-gradient(-45deg, #1a1a1a, #1a1a1a 1px, transparent 1px, transparent 20px);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .support-bar { background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px); color: white; text-align: center; padding: 12px; font-size: 0.95rem; border-bottom: 1px solid var(--accent-gold-border); }
+        .support-bar a { color: var(--accent-gold); font-weight: 700; text-decoration: none; transition: color 0.3s; }
+        .support-bar a:hover { color: #fff; }
+
+        .main-container { max-width: 1200px; margin: auto; text-align: center; padding: 20px; }
+        
+        .header-container, .addon-section, .discount-section, .faq-section, .registration-funnel, .pricing-card {
+            background-color: var(--card-background);
+            border-radius: 20px;
+            border: 1px solid var(--accent-gold-border);
+            box-shadow: 0 0 35px var(--accent-gold-glow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-container:hover, .addon-section:hover, .discount-section:hover, .faq-section:hover, .registration-funnel:hover, .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 50px var(--accent-gold-glow-hover);
+        }
+
+        .header-container { 
+            padding: 40px; 
+            margin-bottom: 50px; 
+            animation: fast-luxury-flash 0.8s linear infinite;
+        }
+
+        .main-title { 
+            font-size: 2.8rem; font-weight: 800; margin-bottom: 20px; position: relative;
+            display: inline-block; padding-bottom: 15px; line-height: 1.4;
+            background: linear-gradient(90deg, #fdf4d0, #D4AF37, #b8860b);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text; color: transparent;
+        }
+        .main-title::after {
+            content: ''; position: absolute; bottom: 0; left: 50%;
+            transform: translateX(-50%); width: 120px; height: 3px;
+            background: var(--accent-gold); border-radius: 2px; opacity: 0.5;
+        }
+
+        .resume-subtitle { display: block; font-size: 1.1rem; font-weight: 400; color: var(--text-color-secondary); margin-top: 10px; line-height: 1.7; }
+        .resume-subtitle strong { font-weight: 700; color: var(--text-color); }
+        .main-subtitle { font-size: 1.2rem; color: var(--text-color-secondary); margin-bottom: 35px; line-height: 2; }
+
+        .instruction-box {
+            max-width: 850px; margin: 0 auto 50px auto; padding: 15px 20px;
+            background-color: rgba(212, 175, 55, 0.05); border-radius: 10px;
+            border-right: 4px solid var(--accent-gold); display: flex; align-items: center;
+            justify-content: center; text-align: center; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.05);
+        }
+        .instruction-box .info-icon { width: 24px; height: 24px; fill: var(--accent-gold); margin-left: 15px; flex-shrink: 0; }
+        .instruction-box p { margin: 0; font-size: 0.95rem; color: var(--text-color); line-height: 1.7; }
+        .instruction-box p strong { color: var(--accent-gold); }
+
+        .pricing-container { display: flex; justify-content: center; align-items: stretch; flex-wrap: wrap; gap: 30px; }
+        .pricing-card { width: 330px; display: flex; flex-direction: column; padding: 0; }
+
+        /* --- VIP Card Shine Effect --- */
+        .pricing-card.vip-highlight::after {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 50%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(212, 175, 55, 0.15) 50%, rgba(255, 255, 255, 0) 100%);
+            animation: shine-sweep-vertical 5s ease-in-out 2s infinite;
+            z-index: 1;
+        }
+        .pricing-card.vip-highlight .plan-title-toggle > span:first-child {
+            animation: flash-gold-title 1.5s linear infinite;
+        }
+
+        .card-header { padding: 25px 25px 15px 25px; border-bottom: 1px solid var(--accent-gold-border); display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2; }
+        
+        .plan-title-toggle {
+            background-color: transparent; border: 2px solid var(--accent-gold); border-radius: 12px;
+            padding: 8px 25px; font-family: 'Vazirmatn', sans-serif; cursor: pointer;
+            user-select: none; display: inline-flex; align-items: center; justify-content: center;
+            margin-bottom: 15px; box-shadow: 0 6px 15px rgba(212, 175, 55, 0.1);
+            transition: all 0.3s ease;
+        }
+        .plan-title-toggle:hover {
+            transform: translateY(-2px); background-color: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
+        }
+        .plan-title-toggle > span:first-child { font-size: 2.2rem; font-weight: 800; color: var(--accent-gold); }
+        .arrow-icon { font-size: 1.2rem; margin-right: 10px; transition: transform 0.3s ease; color: var(--accent-gold); }
+        
+        .plan-feature-content {
+            background-color: rgba(0,0,0,0.2); border-radius: 8px; padding: 15px;
+            font-size: 0.9rem; color: var(--text-color-secondary); line-height: 1.9;
+            width: 90%; margin: 0 auto; text-align: justify; border-right: 3px solid var(--accent-gold);
+        }
+        
+        .card-body { padding: 30px; flex-grow: 1; position: relative; z-index: 2; }
+        .price-container { margin-bottom: 5px; height: 95px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .original-price { font-size: 2.0rem; font-weight: 700; color: var(--discount-red); text-decoration: line-through; text-decoration-thickness: 2px; opacity: 0.8; }
+        .discounted-price { font-size: 2.8rem; font-weight: 800; color: var(--text-color); }
+        .price-currency { font-size: 1rem; font-weight: 400; }
+        .price-period { font-size: 1rem; color: var(--text-color-secondary); margin-bottom: 25px; font-weight: 700; }
+        
+        /* --- Multi Price Table for Comprehensive Plan --- */
+        .multi-price-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 25px;
+            background: rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid var(--accent-gold-border);
+        }
+        .multi-price-title {
+            font-size: 0.9rem;
+            color: var(--text-color-secondary);
+            margin-bottom: 5px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .multi-price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-color);
+            border-bottom: 1px dashed rgba(255,255,255,0.1);
+            padding-bottom: 8px;
+        }
+        .multi-price-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .multi-price-item span:first-child {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .multi-price-item span:last-child {
+            font-weight: 800;
+            color: var(--accent-gold);
+            font-size: 1.05rem;
+        }
+        .multi-price-item small {
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--text-color-secondary);
+        }
+
+        .features-list { list-style: none; padding: 0; margin: 0; text-align: right; }
+        .features-list li { margin-bottom: 12px; display: flex; align-items: center; font-size: 1rem; font-weight: 500; color: var(--text-color); min-height: 35px; }
+        .features-list li::before { content: '✓'; color: var(--accent-gold); font-weight: 800; margin-left: 10px; flex-shrink: 0; }
+        .features-list li.has-button { justify-content: space-between; }
+        .features-list li.has-button > span { flex-grow: 1; }
+
+        .details-btn {
+            background: linear-gradient(130deg, var(--accent-gold), var(--accent-gold-darker));
+            border: none; border-radius: 9px; color: #121212; padding: 6px 18px;
+            font-family: 'Vazirmatn', sans-serif; font-weight: 800; font-size: 0.9rem;
+            cursor: pointer; text-decoration: none; display: inline-block;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2); transition: all 0.3s ease; flex-shrink: 0;
+        }
+        .details-btn:hover { transform: translateY(-2px) scale(1.05); box-shadow: 0 6px 25px rgba(212, 175, 55, 0.3); }
+        
+        .modal-backdrop {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px);
+            display: none; align-items: center; justify-content: center;
+            z-index: 9999; opacity: 0; transition: opacity 0.3s ease;
+        }
+        .modal-backdrop.active { display: flex; opacity: 1; }
+        .modal-content {
+            background-color: var(--card-background); color: var(--text-color); padding: 30px 40px; border-radius: 15px;
+            max-width: 800px; width: 90%; max-height: 85vh; overflow-y: auto; position: relative;
+            border: 1px solid var(--accent-gold-border); box-shadow: 0 5px 50px rgba(212, 175, 55, 0.15);
+            transform: translateY(-50px); transition: transform 0.3s ease;
+        }
+        .modal-backdrop.active .modal-content { transform: translateY(0); }
+        .modal-toggle { display: none; }
+        .modal-toggle:checked + .modal-backdrop { display: flex; opacity: 1; }
+        .modal-toggle:checked + .modal-backdrop .modal-content { transform: translateY(0); }
+        .modal-close { position: absolute; top: 15px; left: 20px; font-size: 2rem; font-weight: bold; color: var(--text-color-secondary); cursor: pointer; line-height: 1; text-decoration: none; transition: color 0.3s, transform 0.3s; }
+        .modal-close:hover { color: var(--accent-gold); transform: rotate(90deg); }
+        .modal-title { font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); margin-top: 0; margin-bottom: 25px; border-bottom: 2px solid var(--accent-gold-border); padding-bottom: 15px; }
+        .modal-body h3 { font-size: 1.3rem; font-weight: 700; color: var(--text-color); margin-top: 25px; margin-bottom: 15px; }
+        .modal-body p, .modal-body li { font-size: 1rem; line-height: 2.1; text-align: justify; color: var(--text-color); }
+        .modal-body ul { list-style: none; padding-right: 0; }
+        .modal-body ul li { padding-right: 30px; position: relative; margin-bottom: 15px; }
+        .modal-body ul li::before { content: '✓'; position: absolute; right: 0; top: 0; color: var(--accent-gold); font-weight: bold; font-size: 1.2rem; }
+        .modal-body .final-word { margin-top: 30px; padding: 20px; background-color: rgba(212, 175, 55, 0.05); border-right: 5px solid var(--accent-gold); font-style: italic; font-weight: 500; }
+        
+        .section-divider { margin: 70px 0 50px 0; text-align: center; }
+        .section-divider h2 { font-size: 2.2rem; font-weight: 800; color: var(--text-color); margin-bottom: 10px; display: inline-flex; align-items: center; }
+        .section-divider p { font-size: 1.1rem; color: var(--text-color-secondary); margin-top: 0; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .section-divider::after { content: ''; display: block; width: 100px; height: 2px; background: var(--accent-gold); border-radius: 2px; margin: 25px auto 0 auto; opacity: 0.7; }
+
+        .addon-section { margin-top: 60px; padding: 40px; }
+        .addon-title { font-size: 1.8rem; font-weight: 800; color: var(--text-color); margin-bottom: 10px; display: inline-flex; align-items: center; }
+        .addon-subtitle { font-size: 1.1rem; color: var(--text-color-secondary); margin-top: 0; margin-bottom: 30px; }
+        .addon-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px 30px; text-align: right; }
+        .addon-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid rgba(224, 224, 224, 0.1); }
+        .addon-item span:first-child { font-weight: 700; flex-grow: 1; display: inline-flex; align-items: center; }
+        .addon-price-button-group { display: flex; align-items: center; gap: 15px; flex-shrink: 0; color: var(--text-color-secondary); }
+        
+        .discount-section { margin-top: 40px; padding: 40px 30px; text-align: center; }
+        .discount-title { font-size: 1.8rem; font-weight: 800; color: var(--text-color); margin-bottom: 20px; display: inline-flex; align-items: center; }
+        .discount-intro { font-size: 1.1rem; line-height: 1.9; color: var(--text-color); margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .discount-subsection { margin-bottom: 35px; max-width: 600px; margin-left: auto; margin-right: auto; text-align: right; }
+        .subsection-title { font-size: 1.3rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--accent-gold); display: inline-block; }
+        .discount-subsection p, .discount-subsection ul { font-size: 1rem; line-height: 2; color: var(--text-color); }
+        .discount-subsection p, .discount-subsection li { text-align: justify; }
+        .discount-subsection ul { list-style: none; padding-right: 0; }
+        .discount-subsection li { margin-bottom: 10px; padding-right: 25px; position: relative; }
+        .discount-subsection li::before { content: '✔'; position: absolute; right: 0; top: 0; color: var(--accent-gold); font-weight: 800; }
+
+        .faq-section { margin-top: 60px; padding: 40px; }
+        .faq-title { font-size: 2.2rem; font-weight: 800; color: var(--text-color); margin-bottom: 15px; display: inline-flex; align-items: center; }
+        .faq-subtitle { font-size: 1.1rem; color: var(--text-color-secondary); margin-bottom: 40px; }
+        .faq-container { max-width: 850px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+        .faq-item { background-color: var(--card-background); border: 1px solid var(--accent-gold-border); border-radius: 12px; transition: all 0.3s; }
+        .faq-item:hover { border-color: var(--accent-gold); }
+        .faq-question { width: 100%; padding: 20px 25px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: none; border: none; text-align: right; font-family: 'Vazirmatn', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--text-color); }
+        .faq-icon { font-size: 1.5rem; font-weight: 500; color: var(--accent-gold); transition: transform 0.3s ease-in-out; }
+        .faq-question.active .faq-icon { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; }
+        .faq-answer p { padding: 0 25px 20px 25px; margin: 0; font-size: 1rem; line-height: 2.1; color: var(--text-color-secondary); text-align: justify; }
+        .faq-answer p strong { color: var(--accent-gold); }
+
+        .closing-section { margin-top: 60px; padding: 30px 0; padding-bottom: 15px; }
+        .punchline { font-size: 1.5rem; font-weight: 800;  color: var(--text-color); margin-bottom: 25px; line-height: 1.9; }
+        .final-cta { margin-top: 30px; font-size: 1.2rem; font-weight: 700; color: var(--accent-gold); padding: 15px; border: 2px solid var(--accent-gold); border-radius: 10px; display: inline-block; background-color: transparent; transition: all 0.3s; text-decoration: none; }
+        .final-cta:hover { background-color: var(--accent-gold); color: #121212; transform: translateY(-2px); }
+        
+        .contact-section { margin-top: 10px; padding-top: 30px; border-top: 1px solid var(--accent-gold-border); }
+        .telegram-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; }
+        .telegram-links a { display: inline-block; background-color: transparent; border: 1px solid var(--telegram-blue); color: var(--telegram-blue); padding: 12px 25px; margin: 8px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: all 0.3s; }
+        .telegram-links a:hover { background-color: var(--telegram-blue); color: #ffffff; transform: translateY(-2px); }
+        .clinic-info { margin-top: 30px; color: var(--text-color); font-size: 1.1rem; font-weight: 700; line-height: 2; }
+        .secondary-link { margin-top: 20px; font-size: 1rem; font-weight: 500; color: var(--text-color-secondary); }
+        .secondary-link a { color: var(--accent-gold); font-weight: 700; text-decoration: none; }
+        .secondary-link a:hover { text-decoration: underline; }
+
+        .registration-funnel { margin-top: 60px; padding: 40px 20px; animation: fast-luxury-flash 0.8s linear infinite; }
+        .funnel-title { font-size: 2rem; font-weight: 800; color: var(--text-color); margin-bottom: 40px; display: inline-flex; align-items: center; }
+        .steps-container { display: flex; flex-direction: column; align-items: center; gap: 25px; }
+        .step { display: flex; align-items: center; width: 100%; max-width: 700px; background-color: rgba(0,0,0,0.2); border-radius: 12px; padding: 20px; border: 1px solid var(--accent-gold-border); position: relative; }
+        .step-icon { font-size: 2.5rem; margin-left: 20px; color: var(--accent-gold); flex-shrink: 0; }
+        .step-content { text-align: right; flex-grow: 1; }
+        .step-title { font-size: 1.2rem; font-weight: 700; color: var(--text-color); }
+        .step-description { font-size: 0.95rem; color: var(--text-color-secondary); }
+        .step-number { position: absolute; top: -15px; right: -15px; background-color: var(--accent-gold); color: #121212; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; border: 3px solid var(--card-background); }
+
+        .final-funnel-cta { margin-top: 40px; padding-top: 30px; border-top: 2px dashed var(--accent-gold-border); }
+        .final-funnel-cta h3 { font-size: 1.3rem; font-weight: 700; color: var(--text-color); margin-bottom: 25px; }
+        .cta-elements { display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap; }
+        .porsline-link { display: inline-block; background-color: var(--accent-gold); color: #121212; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 1.2rem; transition: all 0.3s; }
+        .porsline-link:hover { background-color: var(--accent-gold-darker); transform: translateY(-2px) scale(1.05); }
+
+        @media (max-width: 768px) {
+            .header-container { padding: 25px; }
+            .main-title { font-size: 2.2rem; }
+            .resume-subtitle, .main-subtitle { font-size: 1rem; }
+            .pricing-container { flex-direction: column; align-items: center; }
+            .pricing-card { width: 100%; max-width: 400px; }
+            .plan-title-toggle > span:first-child { font-size: 2rem; }
+            .clinic-info, .discount-intro, .subsection-title { font-size: 1rem; }
+            .funnel-title { font-size: 1.5rem; }
+            .step { flex-direction: column; text-align: center; }
+            .step-icon { margin-left: 0; margin-bottom: 15px; }
+            .step-content { text-align: center; }
+            .modal-content { padding: 20px; }
+            .modal-title { font-size: 1.5rem; }
+            .section-divider h2, .faq-title { font-size: 1.8rem; }
+            .faq-question { padding: 15px; font-size: 1rem; }
+            .faq-answer p { padding: 0 15px 15px 15px; }
+        }
+        
+        .plan-toggle-input { display: none; }
+        .plan-toggle-input + .plan-title-toggle + .plan-feature-content { display: none; }
+        .plan-toggle-input:checked + .plan-title-toggle .arrow-icon { transform: rotate(180deg); }
+        .plan-toggle-input:checked + .plan-title-toggle + .plan-feature-content { display: block; }
+    </style>
+</head>
+<body>
+
+    <div class="support-bar">
+        ❓ سوالی دارید یا در مراحل ثبت‌نام به مشکل برخوردید؟ <a href="https://t.me/mirhellirequest" target="_blank">با پشتیبانی تماس بگیرید</a>
+    </div>
+
+    <div class="main-container">
+        <div class="header-container">
+            <h1 class="main-title">طرح‌های مشاوره دکتر میرهلی | برنامه‌ریزی تخصصی کنکور تا رتبه برتر</h1>
+            <p class="resume-subtitle"><strong>(مشاور مستقیم چهار رتبه ۱ کنکور و صدها رتبه تک‌رقمی، دورقمی و سه‌رقمی دیگر)</strong></p>
+            <p class="main-subtitle">مسیر موفقیت خود را با انتخاب بسته‌ای که برای شما طراحی شده، آغاز کنید. طرح مورد نظر خود را انتخاب کرده، توضیحات آن را با دقت مطالعه کنید و در پایان صفحه، روی گزینه ثبت‌نام کلیک نمایید.</p>
+        </div>
+        
+        <div class="instruction-box">
+            <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+            <p><b>راهنما:</b> برای مشاهده مشخصات کلی هر طرح، روی <strong>عنوان آن</strong> کلیک کنید.</p>
+        </div>
+
+        <div class="section-divider">
+            <h2><span class="animated-emoji trophy">🏆</span>طرح‌های اصلی</h2>
+            <p>جامع‌ترین و کامل‌ترین سطح از خدمات آکادمی برای داوطلبانی که به چیزی جز بهترین‌ها فکر نمی‌کنند.</p>
+        </div>
+
+        <div class="pricing-container">
+            <!-- کارت جامع -->
+            <div class="pricing-card">
+                <div class="card-header base">
+                    <input type="checkbox" id="plan-jame-toggle" class="plan-toggle-input">
+                    <label for="plan-jame-toggle" class="plan-title-toggle">
+                        <span>جامع</span>
+                        <span class="arrow-icon">▾</span>
+                    </label>
+                    <div class="plan-feature-content">
+                        <p><strong>این طرح، پرمخاطب‌ترین بسته آکادمی ماست</strong> و بسیاری از رتبه‌های برتر سال‌های گذشته، مسیر موفقیت خود را با همین طرح آغاز کرده‌اند. اگر به دنبال یک برنامه جامع و کامل با قیمتی معقول هستید، این طرح برای شما ایده‌آل است. در این بسته، شما به صورت <strong>مستقیم با دکتر میرهلی در ارتباط خواهید بود</strong>، یک پشتیبان ویژه شما را همراهی می‌کند، آزمون‌های منظم از شما گرفته می‌شود و به طور کلی، تمام امکانات لازم برای یک سال تحصیلی موفق در حد معقول در اختیار شما قرار می‌گیرد.</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="price-container" style="height: auto; margin-bottom: 15px;">
+                        <div class="original-price">۱,۹۰۰,۰۰۰ <span style="font-size: 1rem; font-weight: 400; text-decoration: none; display: inline-block;">تومان</span></div>
+                    </div>
+                    <div class="multi-price-container">
+                        <div class="multi-price-title">شهریه ماهیانه طرح جامع به تفکیک رشته و مقطع:</div>
+                        <div class="multi-price-item">
+                            <span>🔬 تجربی (تمامی مقاطع)</span>
+                            <span>۱,۲۵۰,۰۰۰ <small>تومان</small></span>
+                        </div>
+                        <div class="multi-price-item">
+                            <span>📐 ریاضی (تمامی مقاطع)</span>
+                            <span>۱,۳۰۰,۰۰۰ <small>تومان</small></span>
+                        </div>
+                        <div class="multi-price-item">
+                            <span>🎨 هنر (تمامی مقاطع)</span>
+                            <span>۱,۳۵۰,۰۰۰ <small>تومان</small></span>
+                        </div>
+                        <div class="multi-price-item">
+                            <span>📚 انسانی (تمامی مقاطع)</span>
+                            <span>۱,۴۰۰,۰۰۰ <small>تومان</small></span>
+                        </div>
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li class="has-button"><span>برنامه‌ریزی روزانه، تحلیل گزارش کار و پرسش و پاسخ مستقیم با دکتر میرهلی</span><label for="planning-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                        <li class="has-button"><span>به کارگیری علمی ترین، به روزترین و حرفه‌ای ترین روش های برنامه ریزی توسط شخص دکتر میرهلی</span><label for="planning-method-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                        <li class="has-button"><span>پشتیبانی ویژه توسط رتبه‌های برتر</span><label for="support-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                        <li class="has-button"><span>آزمون هفتگی هدفمند و استاندارد</span><label for="exam-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                        <li class="has-button"><span>عضویت در کانال‌های خصوصی و سمینارهای هفتگی</span><label for="channels-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                        <li class="has-button"><span>برنامه‌ریزی دروس تخصصی و عمومی به صورت تستی و تشریحی</span><label for="dual-planning-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                        <li class="has-button"><span>پایش مکرر وضعیت روانشناختی (دو بار در هفته)</span><label for="psych-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- کارت پیشرفته VIP -->
+            <div class="pricing-card vip-highlight">
+                <div class="card-header vip">
+                    <input type="checkbox" id="plan-vip-toggle" class="plan-toggle-input">
+                    <label for="plan-vip-toggle" class="plan-title-toggle"><span>پیشرفته VIP</span><span class="arrow-icon">▾</span></label>
+                    <div class="plan-feature-content"><p><b>مشخصات کلی:</b> تمام ویژگی‌های طرح جامع به علاوه کلاس‌های گروهی تخصصی و پانسیون آنلاین برای یک تجربه کامل‌تر و حرفه‌ای‌تر.</p></div>
+                </div>
+                <div class="card-body">
+                    <div class="price-container"><div class="original-price">۲,۸۰۰,۰۰۰</div><div class="discounted-price">۲,۱۹۰,۰۰۰ <span class="price-currency">تومان</span></div></div><div class="price-period">ماهیانه</div>
+                    <ul class="features-list">
+                        <li>تمام خدمات بسته جامع</li>
+                        <li class="has-button"><span>کلاس مدیریت زمان (گروهی)</span><label for="time-management-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                        <li class="has-button"><span>کلاس مدیریت استرس (گروهی)</span><label for="stress-management-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                        <li class="has-button"><span>کلاس تحلیل آزمون هوشمند</span><label for="test-analysis-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                        <li class="has-button"><span>پانسیون مطالعاتی آنلاین</span><label for="study-hall-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                        <li class="has-button"><span>کلاس روش مطالعه</span><span class="details-btn">به زودی</span></li>
+                        <li class="has-button"><span>کلاس مدیریت انگیزه و هیجان</span><span class="details-btn">به زودی</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- کارت پلاتینیوم -->
+            <div class="pricing-card">
+                <div class="card-header platinum">
+                    <input type="checkbox" id="plan-platinum-toggle" class="plan-toggle-input">
+                    <label for="plan-platinum-toggle" class="plan-title-toggle"><span>پلاتینیوم</span><span class="arrow-icon">▾</span></label>
+                    <div class="plan-feature-content"><p><b>مشخصات کلی:</b> نهایی‌ترین سطح خدمات شامل تمام ویژگی‌های طرح‌های دیگر به همراه نظارت VIP و فشرده در طول روز و تماس تلفنی مستقیم برای حداکثر بازدهی و یک ارتباط کاملا شخصی‌سازی شده.</p></div>
+                </div>
+                <div class="card-body">
+                    <div class="price-container"><div class="original-price">۵,۲۰۰,۰۰۰</div><div class="discounted-price">۳,۹۹۰,۰۰۰ <span class="price-currency">تومان</span></div></div><div class="price-period">ماهیانه</div>
+                    <ul class="features-list">
+                        <li>تمام خدمات بسته جامع و پیشرفته</li>
+                        <li class="has-button"><span>نظارت VIP در طول روز (۴ مرتبه) با پشتیبان</span><label for="vip-monitoring-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                        <li class="has-button"><span>تحلیل آزمون شخصی‌سازی شده با پشتیبان</span><label for="personalized-analysis-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                        <li class="has-button"><span>تماس تلفنی ۱۵ دقیقه در ماه با دکتر میرهلی</span><label for="phone-call-modal-toggle" class="details-btn" role="button">جزئیات</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="addon-section">
+            <h3 class="addon-title"><span class="animated-emoji puzzle">🧩</span>خدمات تکمیلی</h3>
+            <p class="addon-subtitle">شما می‌توانید بسته جامع را تهیه کرده و هر یک از خدمات زیر را به صورت جداگانه به آن اضافه کنید.</p>
+            <div class="addon-list">
+                <div class="addon-item"><span>کلاس مدیریت زمان (گروهی)</span><div class="addon-price-button-group"><span>۳۰۰,۰۰۰ تومان / ماهیانه</span></div></div>
+                <div class="addon-item"><span>کلاس مدیریت استرس (گروهی)</span><div class="addon-price-button-group"><span>۳۰۰,۰۰۰ تومان / ماهیانه</span></div></div>
+                <div class="addon-item"><span>کلاس تحلیل آزمون هوشمند</span><div class="addon-price-button-group"><span>۳۰۰,۰۰۰ تومان / ماهیانه</span></div></div>
+                <div class="addon-item"><span>پانسیون مطالعاتی آنلاین</span><div class="addon-price-button-group"><span>۶۵۰,۰۰۰ تومان / ماهیانه</span></div></div>
+                <div class="addon-item"><span>نظارت VIP در طول روز با پشتیبان</span><div class="addon-price-button-group"><span>۱,۰۰۰,۰۰۰ تومان / ماهیانه</span></div></div>
+                <div class="addon-item"><span>تحلیل اختصاصی آزمون با پشتیبان</span><div class="addon-price-button-group"><span>۷۵۰,۰۰۰ تومان / ماهیانه</span></div></div>
+            </div>
+        </div>
+
+        <div class="discount-section"><h3 class="discount-title"><span class="animated-emoji sparkles">✨</span>طرح‌های تشویقی و تسهیلات ویژه</h3><p class="discount-intro">ما در آکادمی دکتر میرهلی، به تلاش و پشتکار شما بها می‌دهیم و معتقدیم دانش‌آموزان مستعد و سخت‌کوش، شایسته بهترین حمایت‌ها هستند. به همین منظور، طرح‌های تشویقی و مسیرهای ویژه‌ای برای بهره‌مندی از تسهیلات ما در نظر گرفته شده است.</p><div class="discount-subsection"><h4 class="subsection-title">💎 طرح معرفی دوستان (پاداش وفاداری)</h4><p>به ازای معرفی هر کدام از دوستان خود به آکادمی، تا زمانی که دوست شما در آکادمی ثبت‌نام باشد، شما به صورت <strong>ماهیانه مبلغ ۲۰۰,۰۰۰ تومان</strong> تخفیف در شهریه خود دریافت خواهید کرد. این یک پاداش مستمر برای قدردانی از اعتماد شماست.</p></div><div class="discount-subsection"><h4 class="subsection-title">🏆 تخفیف‌های ویژه ماهانه</h4><p>دانش‌آموزان با سوابق تحصیلی درخشان، می‌توانند از تخفیف‌های ثابت ماهانه بهره‌مند شوند:</p><ul><li><strong>معدل نهایی بالای ۱۹:</strong> تخفیف ماهانه به مبلغ ۱۰۰,۰۰۰ تومان.</li><li><strong>رتبه کنکور زیر ۱۰,۰۰۰:</strong> دانش‌آموزانی که در کنکور تجربی سال‌های گذشته <strong>رتبه در سهمیه منطقه</strong> زیر ۱۰,۰۰۰ کسب کرده‌اند، شامل تخفیف ماهانه ۱۰۰,۰۰۰ تومانی می‌شوند.</li></ul></div><div class="discount-subsection"><h4 class="subsection-title">🎯 مسیرهای ویژه برای دریافت تسهیلات</h4><ul><li><strong>رتبه‌های برتر آزمون‌های آزمایشی:</strong> این عزیزان در صورت کسب نمره قبولی در <strong>آزمون تایید صلاحیت آکادمی</strong>، می‌توانند از تخفیف‌های ویژه بهره‌مند شوند.</li><li><strong>همکاری با سازمان‌ها و نهادها:</strong> امکان عقد قرارداد و ارائه خدمات با شرایط ویژه برای نهادهای حمایتی، مدارس و سازمان‌ها (مشروط به پرداخت هزینه توسط سازمان مربوطه) وجود دارد.</li></ul></div></div>
+        <div class="faq-section"><h2 class="faq-title"><span class="animated-emoji faq">🤔</span>سوالات متداول</h2><p class="faq-subtitle">پاسخ به برخی از مهم‌ترین دغدغه‌های شما پیش از شروع</p><div class="faq-container"><div class="faq-item"><button class="faq-question"><span>آیا واقعاً شخص دکتر میرهلی به صورت مستقیم با ما در ارتباط خواهند بود؟</span><span class="faq-icon">+</span></button><div class="faq-answer"><p><strong>بله، به طور ۱۰۰ درصد.</strong> این اصلی‌ترین و غیرقابل تغییرترین ویژگی تمام طرح‌های ماست. شما گزارش کار روزانه خود را مستقیماً در یک چت خصوصی برای شخص ایشان ارسال می‌کنید و برنامه روز بعد را نیز شخصاً از خودشان دریافت می‌کنید. هیچ منشی، دانشجو یا واسطه‌ای در این فرآیند وجود ندارد.</p></div></div><div class="faq-item"><button class="faq-question"><span>اگر به هر دلیلی از برنامه عقب افتادم، چه اتفاقی می‌افتد؟</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>این یکی از مزیت‌های اصلی سیستم برنامه‌ریزی روزانه ماست. برخلاف برنامه‌های هفتگی که عقب افتادن در آن‌ها به یک بحران تبدیل می‌شود، در سیستم ما کافیست شما در گزارش کار بعدی خود، علت و میزان عقب‌ماندگی را توضیح دهید. دکتر میرهلی شخصاً با در نظر گرفتن شرایط شما، یک <strong>برنامه جبرانی هوشمندانه و واقع‌بینانه</strong> در برنامه روز بعدتان لحاظ می‌کنند تا بدون استرس و فشار مضاعف، به مسیر اصلی بازگردید.</p></div></div><div class="faq-item"><button class="faq-question"><span>تفاوت اصلی شما با سایر موسسات یا مشاوران چیست؟</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>تفاوت ما در سه اصل کلیدی خلاصه می‌شود: <strong>۱. ارتباط مستقیم و واقعی با استراتژیست اصلی</strong> (شخص دکتر میرهلی)، <strong>۲. برنامه‌ریزی روزانه و پویا</strong> که با عملکرد شما تطبیق پیدا می‌کند، و <strong>۳. یک اکوسیستم کامل و علمی</strong> که تمام جنبه‌های موفقیت از جمله آموزش تکنیک‌های مطالعه، مدیریت زمان، کنترل استرس و تحلیل آزمون را پوشش می‌دهد. ما یک شخص یا یک طرح نمی‌فروشیم؛ ما یک سیستم کامل موفقیت را ارائه می‌دهیم.</p></div></div><div class="faq-item"><button class="faq-question"><span>رزومه و سوابق دکتر میرهلی چیست و چرا باید به ایشان اعتماد کنم؟</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>شما می‌توانید با کلیک بر روی لینک «رزومه حرفه‌ای دکتر امیر میرهلی» در پایین همین صفحه، سوابق کامل ایشان را مشاهده کنید. اما به طور خلاصه، ایشان با ۱۵ سال سابقه، بدون تردید <strong>تنها مشاور کنکور کشور هستند که در تمامی رشته‌ها (تجربی، ریاضی، انسانی، هنر و زبان) شخصاً رتبه‌سازی کرده‌اند.</strong> هدایت هزاران رتبه برتر، از جمله <strong>چهار رتبه ۱ کنکور</strong>، در کارنامه ایشان ثبت شده است. مهم‌تر از همه، شما با فردی در ارتباط خواهید بود که خودشان نیز طعم شیرین رتبه ۱ کنکور را چشیده‌اند و مسیر موفقیت را به خوبی می‌شناسند.</p></div></div><div class="faq-item"><button class="faq-question"><span>❓ من کلاس مدرسه، کلاس کنکور یا مثلاً کلاس‌های ماز دارم؛ چطور برنامه‌م رو با برنامه‌ریزی دکتر هماهنگ کنم؟</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>✅ برنامه‌ریزی‌های آقای دکتر به‌صورت حجمی و منعطف طراحی شده‌ن، به این معنی که شما می‌تونید بسته به شرایط و اولویت‌های روزانه‌تون، بخشی از حجم برنامه رو در زمان‌های آزاد انجام بدید و باقی زمان رو به تکالیف مدرسه یا کلاس‌هاتون اختصاص بدید. در پایان روز هم، طبق روال، گزارشتون رو ارسال می‌کنید و عملکرد روزانه‌تون ارزیابی می‌شه.</p><p>🗣 برای هماهنگ‌کردن کلاس‌های خاص (مثل کلاس مدرسه، ماز، آزمون‌های موسسات و...) کافیه با احترام و شفافیت با آقای دکتر مطرح کنید؛ ایشون طبق پروتکل‌های مشخص آکادمی شرایط شما رو بررسی می‌کنن، و در صورتی که تداخل جدی وجود نداشته باشه، برنامه‌تون با زمان‌بندی کلاس‌ها هماهنگ خواهد شد.</p><p>🔑 مهم اینه که اولویت شما رشد خودتون باشه و با تعهد، دیسیپلین و تعامل محترمانه، بیشترین بهره رو از این مسیر ببرید.</p></div></div></div></div>
+        <div class="registration-funnel"><h2 class="funnel-title"><span class="animated-emoji rocket">🚀</span>مراحل ثبت‌نام در آکادمی</h2><div class="steps-container"><div class="step"><div class="step-number">۱</div><div class="step-icon">📝</div><div class="step-content"><h3 class="step-title">تکمیل فرم اطلاعات</h3><p class="step-description">اطلاعات شخصی، تحصیلی و مدارک مورد نیاز را در این مرحله بارگذاری کنید.</p></div></div><div class="step"><div class="step-number">۲</div><div class="step-icon">📄</div><div class="step-content"><h3 class="step-title">مطالعه و تایید قرارداد</h3><p class="step-description">متن قرارداد خدمات آموزشی را به دقت مطالعه و به صورت دیجیتالی تایید نمایید.</p></div></div><div class="step"><div class="step-number">۳</div><div class="step-icon">💳</div><div class="step-content"><h3 class="step-title">پرداخت شهریه</h3><p class="step-description">از طریق درگاه پرداخت امن، هزینه بسته انتخابی خود را واریز کنید.</p></div></div><div class="step"><div class="step-number">۴</div><div class="step-icon">✅</div><div class="step-content"><h3 class="step-title">ثبت‌نام نهایی و شروع</h3><p class="step-description">پس از پرداخت موفق، آیدی تلگرام دکتر میرهلی برای شروع فرآیند مشاوره به شما نمایش داده خواهد شد.</p></div></div></div><div class="final-funnel-cta"><h3>برای شروع فرآیند ثبت‌نام، روی لینک زیر کلیک کنید:</h3><div class="cta-elements"><a href="https://survey.porsline.ir/s/OTT45Qc5" target="_blank" class="porsline-link">ورود به سامانه ثبت‌نام</a></div></div></div>
+        <div class="closing-section"><p class="punchline">🏆 تفاوت ما با دیگران در کیفیت و نتایج کارمان است.</p><a href="https://t.me/+YNRBHUqXH7xiZDQ0" target="_blank" class="final-cta">🎧 برای شنیدن توضیحات کامل این خدمات توسط دکتر میرهلی کلیک نمایید</a></div>
+        <div class="contact-section"><div class="telegram-links"><a href="https://amirmirhelli.ir/%d8%a7%d9%85%db%8c%d8%b1-%d9%85%db%8c%d8%b1%d9%87%d9%84%db%8c-%da%a9%db%8c%d8%b3%d8%aa/" target="_blank">رزومه حرفه‌ای دکتر امیر میرهلی</a><a href="https://t.me/onlineSeminarAmirMirhelli" target="_blank">مشاهده مصاحبه رتبه‌های برتر</a><a href="https://t.me/drmirhelli" target="_blank">کانال رضایت از مشاوره خصوصی</a></div><div class="clinic-info">🌅 کلینیک روانشناسی اردیبهشت، اصفهان، خیابان شمس‌آبادی، مجتمع پزشکی آلا<br>☎️ 031-32222457</div><p class="secondary-link"><a href="https://t.me/Amirmirhelli" target="_blank">لینک کانال اصلی و رسمی دکتر امیر میرهلی در تلگرام</a></p></div>
+    </div>
+
+    <!-- Modals -->
+    <input type="checkbox" id="planning-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="planning-modal"><div class="modal-content"><label for="planning-modal-toggle" class="modal-close">×</label><h2 class="modal-title">برنامه‌ریزی مستقیم و روزانه: امضای کار دکتر میرهلی</h2><div class="modal-body"><h3>این یعنی چه؟</h3><p>بر خلاف ۹۹٪ مشاوران که شما را به یک پشتیبان یا دانشجو وصل می‌کنند، در تمام طرح‌های ما، شما به صورت <strong>مستقیم و روزانه با شخص دکتر میرهلی</strong> در ارتباط هستید. این ارتباط در یک چت خصوصی در تلگرام شکل می‌گیرد.</p><h3>فرآیند چگونه است؟</h3><ul><li>هر شب، شما گزارش کار روزانه خود را طبق فرمتی که به شما آموزش داده می‌شود، برای دکتر میرهلی ارسال می‌کنید.</li><li>ایشان شخصاً گزارش شما را تحلیل کرده و بر اساس عملکرد، نقاط ضعف و قوت، و شرایط پیش‌بینی نشده شما (مثل امتحان، بیماری و...)، برنامه دقیق و شخصی‌سازی شده روز بعدتان را طراحی و ارسال می‌کنند.</li><li>شما می‌توانید سوالات و چالش‌های خود را مستقیماً از ایشان بپرسید و پاسخ خود را بدون واسطه دریافت کنید.</li></ul><p class="final-word">این ارتباط مستقیم، تضمین می‌کند که شما همیشه تحت نظر استراتژیست اصلی مجموعه هستید و برنامه شما بالاترین کیفیت و انطباق‌پذیری را با شرایطتان دارد.</p></div></div></div>
+    <input type="checkbox" id="planning-method-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="planning-method-modal"><div class="modal-content"><label for="planning-method-modal-toggle" class="modal-close">×</label><h2 class="modal-title">معماری برنامه‌ریزی دکتر میرهلی: نقشه راه روزانه و شخصی‌سازی شده شما</h2><div class="modal-body"><h3>روش «حجمی-سلولی» چیست؟</h3><p>ما به شما یک برنامه هفتگی یا ماهانه ثابت و غیرقابل انعطاف نمی‌دهیم. برنامه شما به صورت <strong>روزانه</strong> و بر اساس یک متدولوژی منحصر به فرد به نام «حجمی-سلولی» طراحی می‌شود. در این روش، هر روز به سلول‌های مطالعاتی (مثلاً ۲ ساعته) تقسیم می‌شود و برای هر سلول، یک حجم مشخص از یک درس (مثلاً خواندن ۱۰ صفحه زیست + ۲۰ تست) تعریف می‌شود.</p><h3>مزایای این روش:</h3><ul><li><strong>انعطاف‌پذیری بالا:</strong> اگر یک روز نتوانستید یک سلول را کامل کنید، کل برنامه به هم نمی‌ریزد. برنامه روز بعد شما بر اساس این عقب‌ماندگی، هوشمندانه تنظیم می‌شود.</li><li><strong>افزایش تمرکز:</strong> با تمرکز بر روی اهداف کوچک و روزانه، انگیزه و تمرکز شما به شدت افزایش می‌یابد.</li><li><strong>یادگیری عمیق:</strong> این روش بر پایه ترکیب مطالعه و تست‌زنی در هر سلول بنا شده که منجر به یادگیری عمیق و پایدار می‌شود.</li><li><strong>شخصی‌سازی واقعی:</strong> برنامه هر فرد، اثر انگشت اوست. هیچ دو برنامه‌ای دقیقاً شبیه هم نیست، زیرا بر اساس عملکرد و گزارش کار روزانه شما تنظیم می‌شود.</li></ul><p class="final-word">این روش، یک سیستم علمی و اثبات‌شده برای مدیریت بهینه زمان و انرژی است که شما را از سردرگمی و استرس نجات می‌دهد.</p></div></div></div>
+    <input type="checkbox" id="support-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="support-modal"><div class="modal-content"><label for="support-modal-toggle" class="modal-close">×</label><h2 class="modal-title">پشتیبان ویژه: فراتر از یک پیگیر</h2><div class="modal-body"><h3>نقش پشتیبان در آکادمی ما چیست؟</h3><p>پشتیبان شما یک دانش‌آموز معمولی نیست، بلکه یکی از <strong>رتبه‌های برتر سال‌های گذشته</strong> است که خود این مسیر را با موفقیت طی کرده. وظیفه او صرفاً پیگیری گزارش کار شما نیست، بلکه یک همراه و راهنمای کامل است.</p><h3>خدمات پشتیبان ویژه:</h3><ul><li><strong>پیگیری و نظارت:</strong> پشتیبان به صورت منظم وضعیت درسی و پایبندی شما به برنامه را پیگیری کرده و گزارش‌ها را به دکتر میرهلی منتقل می‌کند.</li><li><strong>رفع اشکال درسی:</strong> شما می‌توانید سوالات و اشکالات درسی خود را از پشتیبان بپرسید و از تجربیات او استفاده کنید.</li><li><strong>انتقال تجربه:</strong> پشتیبان به شما یاد می‌دهد که چگونه با چالش‌های مختلف سال کنکور (مثل مدیریت زمان، روش مطالعه دروس مختلف، تحلیل آزمون) کنار بیایید.</li><li><strong>مشاوره انگیزشی:</strong> در روزهایی که خسته یا ناامید هستید، پشتیبان شما بهترین کسی است که می‌تواند شما را درک کرده و به شما انگیزه بدهد.</li></ul><p class="final-word">پشتیبان شما، یک الگوی موفق و یک دوست بزرگتر است که مسیر پر پیچ و خم کنکور را برای شما هموارتر می‌کند.</p></div></div></div>
+    <input type="checkbox" id="exam-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="exam-modal"><div class="modal-content"><label for="exam-modal-toggle" class="modal-close">×</label><h2 class="modal-title">آزمون‌های هفتگی: فراتر از سنجش، یک اکوسیستم پیشرفت</h2><div class="modal-body"><h3>چرا آزمون‌های ما متفاوت است؟</h3><p>آزمون‌های هفتگی ما صرفاً برای تعیین سطح نیستند، بلکه بخشی از فرآیند یادگیری و استراتژی شما محسوب می‌شوند. این آزمون‌ها با دقت و وسواس علمی طراحی شده‌اند تا اهداف مشخصی را دنبال کنند.</p><h3>ویژگی‌های آزمون‌ها:</h3><ul><li><strong>هدفمندی:</strong> سوالات آزمون دقیقاً منطبق بر بودجه‌بندی برنامه‌ای است که در طول هفته دریافت کرده‌اید.</li><li><strong>استانداردسازی:</strong> سوالات از میان بهترین و استانداردترین منابع و آزمون‌های آزمایشی کشور انتخاب می‌شوند تا شما با دیدگاه طراحان مختلف آشنا شوید.</li><li><strong>تحلیل و کارنامه هوشمند:</strong> پس از هر آزمون، یک کارنامه تحلیلی دقیق دریافت می‌کنید که نقاط ضعف شما را در مباحث مختلف به تفکیک نشان می‌دهد.</li><li><strong>ورود به چرخه جبرانی:</strong> نتایج آزمون شما مستقیماً توسط دکتر میرهلی تحلیل شده و در برنامه‌ریزی هفته آینده شما برای مرور و جبران نقاط ضعف، لحاظ می‌شود.</li></ul><p class="final-word">این آزمون‌ها یک آینه دقیق از عملکرد شما هستند که به ما کمک می‌کنند تا برنامه‌ریزی شما را به صورت هوشمندانه و داده-محور بهینه کنیم.</p></div></div></div>
+    <input type="checkbox" id="channels-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="channels-modal"><div class="modal-content"><label for="channels-modal-toggle" class="modal-close">×</label><h2 class="modal-title">اکوسیستم ارتباطی آکادمی: هر کانال، یک هدف مشخص</h2><div class="modal-body"><p>با ثبت‌نام در هر یک از طرح‌ها، شما به یک اکوسیستم ارتباطی کامل و طبقه‌بندی شده در تلگرام دسترسی پیدا می‌کنید تا اطلاعات مورد نیاز خود را به صورت منظم و بدون سردرگمی دریافت کنید.</p><h3>این اکوسیستم شامل:</h3><ul><li><strong>کانال اصلی آکادمی:</strong> برای اطلاع‌رسانی‌های عمومی، نکات مشاوره‌ای روزانه، و فایل‌های صوتی و تصویری دکتر میرهلی.</li><li><strong>کانال سمینارهای هفتگی:</strong> لینک ورود به سمینارهای آنلاین هفتگی که با موضوعات کلیدی مانند تکنیک‌های مطالعه، مدیریت استرس، و برنامه‌ریزی برگزار می‌شود، در این کانال قرار می‌گیرد.</li><li><strong>کانال ویژه دانش‌آموزان ثبت‌نامی:</strong> یک کانال خصوصی که در آن فایل‌های اختصاصی، وویس‌های راهبردی، و اطلاعات محرمانه مربوط به طرح‌ها و آزمون‌ها به اشتراک گذاشته می‌شود.</li></ul><p class="final-word">این ساختار منظم به شما کمک می‌کند تا همیشه به روز باشید و هیچ نکته مهمی را از دست ندهید، در حالی که از آشفتگی و پیام‌های غیرضروری در امان هستید.</p></div></div></div>
+    <input type="checkbox" id="dual-planning-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="dual-planning-modal"><div class="modal-content"><label for="dual-planning-modal-toggle" class="modal-close">×</label><h2 class="modal-title">برنامه‌ریزی یکپارچه: تسلط همزمان بر کنکور و امتحانات نهایی</h2><div class="modal-body"><h3>چالش بزرگ داوطلبان: کنکور یا امتحان نهایی؟</h3><p>با توجه به تاثیر قطعی معدل در نتیجه کنکور، بسیاری از داوطلبان در ایجاد تعادل بین مطالعه تستی برای کنکور و مطالعه تشریحی برای امتحانات نهایی دچار مشکل می‌شوند. ما این مشکل را برای شما حل کرده‌ایم.</p><h3>راهکار ما چیست؟</h3><ul><li><strong>برنامه‌ریزی تلفیقی:</strong> برنامه روزانه شما به گونه‌ای طراحی می‌شود که هر دو جنبه را پوشش دهد. در سلول‌های مطالعاتی، دقیقاً مشخص می‌شود که چه زمانی باید به صورت تشریحی و چه زمانی به صورت تستی مطالعه کنید.</li><li><strong>تاکید بر مفاهیم پایه:</strong> روش تدریس ما بر یادگیری عمیق مفاهیم استوار است. وقتی شما یک مبحث را به صورت مفهومی یاد می‌گیرید، هم توانایی پاسخ به سوالات تستی خلاقانه را پیدا می‌کنید و هم می‌توانید به خوبی به سوالات تشریحی پاسخ دهید.</li><li><strong>آمادگی تدریجی:</strong> ما شما را به صورت تدریجی و از همان ابتدای سال برای امتحانات نهایی آماده می‌کنیم تا در ماه‌های پایانی دچار استرس و کمبود وقت نشوید.</li></ul><p class="final-word">با برنامه یکپارچه ما، دیگر نیازی به انتخاب بین کنکور و معدل نیست. شما برای موفقیت در هر دو جبهه آماده خواهید شد.</p></div></div></div>
+    <input type="checkbox" id="psych-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="psych-modal"><div class="modal-content"><label for="psych-modal-toggle" class="modal-close">×</label><h2 class="modal-title">حمایت علمی روانشناختی: همراه شما در مسیر موفقیت</h2><div class="modal-body"><h3>موفقیت در کنکور فقط به درس خواندن نیست!</h3><p>سال کنکور، یک ماراتن نفس‌گیر است که علاوه بر آمادگی علمی، به آمادگی روحی و روانی بالایی نیاز دارد. بسیاری از داوطلبان با وجود تلاش زیاد، به دلیل استرس، اضطراب، افت انگیزه و مشکلات تمرکز، نتیجه مطلوب را نمی‌گیرند.</p><h3>رویکرد ما:</h3><ul><li><strong>پایش مداوم:</strong> دکتر میرهلی و پشتیبان شما از طریق تحلیل گزارش‌های کار و صحبت‌های روزانه، وضعیت روحی شما را به دقت زیر نظر دارند.</li><li><strong>شناسایی و مداخله به موقع:</strong> در صورت مشاهده علائم افت انگیزه، استرس بیش از حد یا هرگونه مشکل روانشناختی، راهکارهای عملی و علمی به شما ارائه می‌شود.</li><li><strong>آموزش مهارت‌های ذهنی:</strong> در سمینارهای هفتگی، تکنیک‌های مدیریت استرس، افزایش تمرکز، و حفظ انگیزه به صورت علمی و کاربردی به شما آموزش داده می‌شود.</li><li><strong>ارجاع تخصصی:</strong> در صورت نیاز، شما به کلینیک روانشناسی اردیبهشت (که دکتر میرهلی از اعضای آن هستند) برای دریافت مشاوره تخصصی ارجاع داده خواهید شد.</li></ul><p class="final-word">ما معتقدیم یک ذهن آرام و متمرکز، پیش‌نیاز اصلی موفقیت است. به همین دلیل، سلامت روان شما برای ما به اندازه پیشرفت درسی‌تان اهمیت دارد.</p></div></div></div>
+    <input type="checkbox" id="study-hall-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="study-hall-modal"><div class="modal-content"><label for="study-hall-modal-toggle" class="modal-close">×</label><h2 class="modal-title">پانسیون مطالعاتی آنلاین: فراتر از مطالعه‌ی تنها</h2><div class="modal-body"><h3>یک محیط مطالعه حرفه‌ای، در خانه شما!</h3><p>آیا در خانه تمرکز کافی برای مطالعه ندارید؟ آیا از تنهایی درس خواندن خسته شده‌اید؟ پانسیون مطالعاتی آنلاین ما یک راه حل مدرن و کارآمد برای این مشکلات است.</p><h3>پانسیون ما چگونه کار می‌کند؟</h3><ul><li><strong>محیطی ساختاریافته:</strong> شما در یک فضای آنلاین (مانند گوگل میت) به همراه سایر داوطلبان و با نظارت یک پشتیبان ویژه، مطالعه می‌کنید.</li><li><strong>زمان‌بندی مشخص:</strong> پارت‌های مطالعاتی و زمان‌های استراحت از قبل مشخص شده و همه ملزم به رعایت آن هستند (بر اساس تکنیک پومودورو).</li><li><strong>نظارت و سکوت کامل:</strong> ناظر پانسیون برقراری سکوت کامل را تضمین کرده و از طریق دوربین، بر عملکرد شما نظارت می‌کند تا از اتلاف وقت جلوگیری شود.</li><li><strong>افزایش انگیزه:</strong> مطالعه در کنار دیگران، حتی به صورت مجازی، حس رقابت سالم و انگیزه را به شدت افزایش می‌دهد و شما را از حس انزوا نجات می‌دهد.</li></ul><p class="final-word">پانسیون آنلاین، بهترین راه برای شبیه‌سازی یک محیط کتابخانه‌ای ایده‌آل و به حداکثر رساندن ساعات مطالعه مفید شماست.</p></div></div></div>
+    <input type="checkbox" id="time-management-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="time-management-modal"><div class="modal-content"><label for="time-management-modal-toggle" class="modal-close">×</label><h2 class="modal-title">هنر مدیریت زمان: چگونه ۱۲ ماه را به ۱۴ ماه مطالعه موثر تبدیل کنیم؟</h2><div class="modal-body"><h3>زمان، با ارزش‌ترین دارایی شماست.</h3><p>این کلاس گروهی برای آموزش تکنیک‌های عملی و علمی مدیریت زمان طراحی شده است. هدف این است که شما یاد بگیرید چگونه از هر دقیقه خود به بهترین شکل ممکن استفاده کنید و بازدهی مطالعه خود را به شکل چشمگیری افزایش دهید.</p><h3>در این کلاس چه چیزهایی یاد می‌گیرید؟</h3><ul><li><strong>تکنیک پومودورو (Pomodoro):</strong> یاد می‌گیرید چگونه با تقسیم زمان به بازه‌های کوتاه و متمرکز، تمرکز خود را حفظ کرده و از خستگی جلوگیری کنید.</li><li><strong>ماتریس آیزنهاور:</strong> می‌آموزید که چگونه کارهای خود را بر اساس اهمیت و فوریت اولویت‌بندی کنید.</li><li><strong>مقابله با کمال‌گرایی و اهمال‌کاری:</strong> ریشه‌های به تعویق انداختن کارها را شناسایی کرده و راهکارهای عملی برای مقابله با آن را فرا می‌گیرید.</li><li><strong>مدیریت عوامل حواس‌پرتی:</strong> تکنیک‌هایی برای مدیریت استفاده از تلفن همراه، شبکه‌های اجتماعی و سایر عوامل مزاحم را یاد می‌گیرید.</li></ul><p class="final-word">این کلاس، یک سرمایه‌گذاری برای خرید زمان است. با یادگیری این مهارت‌ها، شما می‌توانید در زمان یکسان، حجم بیشتری از مطالب را با کیفیت بالاتری مطالعه کنید.</p></div></div></div>
+    <input type="checkbox" id="stress-management-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="stress-management-modal"><div class="modal-content"><label for="stress-management-modal-toggle" class="modal-close">×</label><h2 class="modal-title">هنر مدیریت استرس: اضطراب را به آرامش و تمرکز تبدیل کنید</h2><div class="modal-body"><h3>استرس، دشمن پنهان موفقیت شماست.</h3><p>استرس کنترل‌نشده می‌تواند بهترین برنامه‌ریزی‌ها و بیشترین تلاش‌ها را بی‌اثر کند. این کلاس گروهی به شما کمک می‌کند تا استرس را بشناسید، آن را مدیریت کنید و حتی از آن به عنوان یک عامل محرک مثبت استفاده نمایید.</p><h3>در این کلاس چه مهارت‌هایی کسب می‌کنید؟</h3><ul><li><strong>شناسایی منابع استرس:</strong> یاد می‌گیرید که چه عواملی (درسی، خانوادگی، شخصی) باعث ایجاد استرس در شما می‌شوند.</li><li><strong>تکنیک‌های آرام‌سازی (Relaxation):</strong> روش‌های عملی مانند تنفس دیافراگمی، مدیتیشن کوتاه و تصویرسازی ذهنی برای کاهش سریع استرس را فرا می‌گیرید.</li><li><strong>بازسازی شناختی:</strong> می‌آموزید که چگونه افکار منفی و فاجعه‌بار (مثل "من حتماً شکست می‌خورم") را شناسایی و با افکار منطقی و مثبت جایگزین کنید.</li><li><strong>افزایش تاب‌آوری (Resilience):</strong> یاد می‌گیرید که چگونه در مقابل شکست‌ها و ناکامی‌ها (مثل یک آزمون بد) مقاوم باشید و سریعاً به مسیر اصلی بازگردید.</li></ul><p class="final-word">این کلاس به شما ابزارهایی می‌دهد که نه تنها در کنکور، بلکه در تمام مراحل زندگی برای حفظ آرامش و تمرکز به کارتان خواهد آمد.</p></div></div></div>
+    <input type="checkbox" id="test-analysis-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="test-analysis-modal"><div class="modal-content"><label for="test-analysis-modal-toggle" class="modal-close">×</label><h2 class="modal-title">کلاس تحلیل آزمون هوشمند: از داده‌های خام تا نقشه راه پیشرفت</h2><div class="modal-body"><h3>آزمون دادن یک مهارت است، اما تحلیل آن یک هنر!</h3><p>بسیاری از داوطلبان پس از هر آزمون، فقط به درصدها و رتبه خود نگاه می‌کنند. اما رتبه‌های برتر می‌دانند که گنج واقعی، در تحلیل دقیق سوالات غلط، نزده و حتی صحیح نهفته است. این کلاس گروهی، هنر استخراج این گنج را به شما می‌آموزد.</p><h3>در این کلاس چه فرآیندی را طی می‌کنید؟</h3><ul><li><strong>اهمیت تحلیل آزمون:</strong> درک می‌کنید که چرا تحلیل آزمون از خود آزمون دادن مهم‌تر است.</li><li><strong>روش تحلیل سه‌گانه:</strong> یاد می‌گیرید که چگونه سوالات غلط (به دلیل بی‌دقتی، فراموشی یا یادگیری ناقص)، سوالات نزده (به دلیل کمبود وقت یا عدم تسلط) و سوالات صحیح (به خصوص آن‌هایی که با شک و تردید پاسخ داده‌اید) را به صورت جداگانه تحلیل کنید.</li><li><strong>تشکیل دفترچه تحلیل آزمون:</strong> یک روش استاندارد برای ثبت نتایج تحلیل و یادداشت‌برداری نکات کلیدی را فرا می‌گیرید.</li><li><strong>تبدیل تحلیل به برنامه:</strong> مهم‌ترین بخش! یاد می‌گیرید که چگونه از نتایج تحلیل خود برای اصلاح روش‌های مطالعه و تنظیم برنامه جبرانی برای هفته‌های آینده استفاده کنید.</li></ul><p class="final-word">این کلاس، شما را از یک شرکت‌کننده منفعل در آزمون‌ها به یک استراتژیست فعال تبدیل می‌کند که از هر آزمون برای پیشرفت خود استفاده می‌کند.</p></div></div></div>
+    <input type="checkbox" id="vip-monitoring-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="vip-monitoring-modal"><div class="modal-content"><label for="vip-monitoring-modal-toggle" class="modal-close">×</label><h2 class="modal-title">نظارت VIP: فرمانده شخصی شما در مسیر موفقیت</h2><div class="modal-body"><h3>جلوگیری از اتلاف وقت، در لحظه!</h3><p>این سرویس برای داوطلبانی طراحی شده که به یک نظارت فشرده و مستمر برای حفظ تمرکز و اجرای دقیق برنامه نیاز دارند. در این طرح، پشتیبان شما مانند یک مربی شخصی، در طول روز همراه شماست.</p><h3>این نظارت چگونه انجام می‌شود؟</h3><ul><li><strong>چهار نوبت در روز:</strong> پشتیبان شما در چهار نوبت کلیدی در طول روز (مثلاً ابتدای صبح، پس از ناهار، عصر و انتهای شب) با شما تماس می‌گیرد یا پیام می‌دهد.</li><li><strong>بررسی عملکرد لحظه‌ای:</strong> در هر نوبت، پشتیبان از شما می‌پرسد که آیا طبق برنامه پیش رفته‌اید، با چه چالشی مواجه شده‌اید و برای پارت بعدی چه برنامه‌ای دارید.</li><li><strong>مقابله فوری با اهمال‌کاری:</strong> این تماس‌های منظم، اجازه اهمال‌کاری و به تعویق انداختن کارها را از شما می‌گیرد و شما را مجبور به پاسخگویی و حفظ ریتم مطالعه می‌کند.</li><li><strong>گزارش مستقیم به دکتر میرهلی:</strong> گزارش این نظارت فشرده به صورت روزانه به دکتر میرهلی منتقل می‌شود تا ایشان تصویر دقیق‌تری از عملکرد شما برای طراحی برنامه فردا داشته باشند.</li></ul><p class="final-word">این سرویس، بالاترین سطح از نظارت و پیگیری را برای داوطلبانی فراهم می‌کند که می‌خواهند از تک تک لحظات خود به بهترین شکل استفاده کنند و هیچ فرصتی را برای موفقیت از دست ندهند.</p></div></div></div>
+    <input type="checkbox" id="personalized-analysis-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="personalized-analysis-modal"><div class="modal-content"><label for="personalized-analysis-modal-toggle" class="modal-close">×</label><h2 class="modal-title">تحلیل آزمون شخصی‌سازی شده: مربی خصوصی شما برای رمزگشایی از هر آزمون</h2><div class="modal-body"><h3>یک جلسه خصوصی برای کالبدشکافی عملکرد شما.</h3><p>این سرویس، فراتر از کلاس گروهی تحلیل آزمون است. در اینجا، شما یک جلسه خصوصی با پشتیبان خود خواهید داشت تا به صورت عمیق و شخصی‌سازی شده، عملکرد شما در آزمون‌های آزمایشی مهم (مانند آزمون‌های جامع سنجش یا قلم‌چی) را کالبدشکافی کنید.</p><h3>در این جلسه چه اتفاقی می‌افتد؟</h3><ul><li><strong>بررسی سوال به سوال:</strong> پشتیبان به همراه شما، سوالات مهم، غلط و نزده شما را یک به یک بررسی می‌کند تا علت دقیق هر اشتباه مشخص شود.</li><li><strong>تحلیل استراتژی آزمون:</strong> عملکرد شما در مدیریت زمان، ترتیب پاسخگویی به دروس و کنترل استرس در حین آزمون به دقت تحلیل می‌شود.</li><li><strong>شناسایی الگوهای خطا:</strong> پشتیبان به شما کمک می‌کند تا الگوهای تکرارشونده در اشتباهات خود (مثلاً بی‌دقتی‌های محاسباتی، اشتباهات در فهم صورت سوال و...) را کشف کنید.</li><li><strong>تنظیم نقشه راه عملی:</strong> خروجی این جلسه، یک نقشه راه دقیق و عملی برای هفته‌های آینده است که مشخص می‌کند روی کدام مباحث باید بیشتر تمرکز کنید و کدام مهارت‌های آزمونی خود را باید تقویت نمایید.</li></ul><p class="final-word">این جلسه، یک سرمایه‌گذاری هوشمندانه برای تبدیل هر آزمون به یک سکوی پرتاب برای آزمون بعدی است.</p></div></div></div>
+    <input type="checkbox" id="phone-call-modal-toggle" class="modal-toggle"><div class="modal-backdrop" id="phone-call-modal"><div class="modal-content"><label for="phone-call-modal-toggle" class="modal-close">×</label><h2 class="modal-title">تماس تلفنی مستقیم: بالاترین سطح دسترسی به استراتژیست ارشد</h2><div class="modal-body"><h3>یک گفتگوی استراتژیک برای برداشتن گام‌های بزرگ.</h3><p>این سرویس، ویژه‌ترین و بالاترین سطح از ارتباط در آکادمی ماست. شما این فرصت را خواهید داشت که به صورت ماهانه، یک تماس تلفنی ۱۵ دقیقه‌ای مستقیم و برنامه‌ریزی شده با شخص دکتر میرهلی داشته باشید.</p><h3>این تماس برای چه اهدافی است؟</h3><ul><li><strong>بررسی استراتژی کلان:</strong> در این گفتگو، شما می‌توانید فراتر از برنامه‌ریزی روزانه، در مورد استراتژی‌های بلندمدت خود (مانند نحوه جمع‌بندی، اولویت‌بندی دروس در ماه‌های مختلف، و هدف‌گذاری برای دانشگاه و رشته) با ایشان مشورت کنید.</li><li><strong>حل چالش‌های ریشه‌ای:</strong> اگر با مشکلات عمیق و ریشه‌ای (درسی یا روانشناختی) مواجه هستید که حل آن‌ها از طریق پیام متنی دشوار است، این تماس بهترین فرصت برای طرح و حل آن‌هاست.</li><li><strong>دریافت انگیزه و اعتماد به نفس:</strong> شنیدن صدای مشاور اصلی و دریافت راهنمایی مستقیم از ایشان، می‌تواند تاثیر فوق‌العاده‌ای بر انگیزه و اعتماد به نفس شما داشته باشد.</li></ul><p class="final-word">این تماس ماهانه، یک جلسه هیئت مدیره برای زندگی تحصیلی شماست که در آن، شما به همراه استراتژیست ارشد مجموعه، بهترین مسیر را برای آینده خود ترسیم می‌کنید.</p></div></div></div>
+
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const wasActive = question.classList.contains('active');
+                faqQuestions.forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.style.maxHeight = null;
+                });
+                if (!wasActive) {
+                    question.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+
+
+
+</body></html>
