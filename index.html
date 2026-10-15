@@ -355,6 +355,27 @@
         .plan-toggle-input + .plan-title-toggle + .plan-feature-content { display: none; }
         .plan-toggle-input:checked + .plan-title-toggle .arrow-icon { transform: rotate(180deg); }
         .plan-toggle-input:checked + .plan-title-toggle + .plan-feature-content { display: block; }
+        .registration-discount-notice {
+            margin: 16px auto;
+            padding: 14px 20px;
+            max-width: 760px;
+            border: 2px solid #ffd54f;
+            border-radius: 12px;
+            background: #332800;
+            color: #fff2b3;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            font-weight: 800;
+            line-height: 1.9;
+            text-align: center;
+            animation: registration-discount-blink 1.5s ease-in-out infinite;
+        }
+        @keyframes registration-discount-blink {
+            0%, 100% { opacity: 1; box-shadow: 0 0 16px #ffd54f66; }
+            50% { opacity: .55; box-shadow: 0 0 3px #ffd54f22; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .registration-discount-notice { animation: none; }
+        }
     </style>
 </head>
 <body>
@@ -377,6 +398,7 @@
 
         <div class="section-divider">
             <h2><span class="animated-emoji trophy">🏆</span>طرح‌های اصلی</h2>
+            <div class="registration-discount-notice">⚠️ ثبت نام با تخفیف 48% تا ساعت 24 روز پنجشنبه 24 مهر</div>
             <p>جامع‌ترین و کامل‌ترین سطح از خدمات آکادمی برای داوطلبانی که به چیزی جز بهترین‌ها فکر نمی‌کنند.</p>
         </div>
 
@@ -402,19 +424,19 @@
                         <div class="multi-price-title">شهریه ماهیانه طرح جامع به تفکیک رشته و مقطع:</div>
                         <div class="multi-price-item">
                             <span>🔬 تجربی (تمامی مقاطع)</span>
-                            <span>۱,۳۰۰,۰۰۰ <small>تومان</small></span>
+                            <span>۱,۰۰۰,۰۰۰ <small>تومان</small></span>
                         </div>
                         <div class="multi-price-item">
                             <span>📐 ریاضی (تمامی مقاطع)</span>
-                            <span>۱,۳۵۰,۰۰۰ <small>تومان</small></span>
+                            <span>۱,۰۰۰,۰۰۰ <small>تومان</small></span>
                         </div>
                         <div class="multi-price-item">
                             <span>🎨 هنر (تمامی مقاطع)</span>
-                            <span>۱,۴۰۰,۰۰۰ <small>تومان</small></span>
+                            <span>۱,۱۰۰,۰۰۰ <small>تومان</small></span>
                         </div>
                         <div class="multi-price-item">
                             <span>📚 انسانی (تمامی مقاطع)</span>
-                            <span>۱,۴۵۰,۰۰۰ <small>تومان</small></span>
+                            <span>۱,۲۰۰,۰۰۰ <small>تومان</small></span>
                         </div>
                     </div>
                     
