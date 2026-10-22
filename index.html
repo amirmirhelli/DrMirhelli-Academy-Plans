@@ -356,6 +356,30 @@
         .plan-toggle-input + .plan-title-toggle + .plan-feature-content { display: none; }
         .plan-toggle-input:checked + .plan-title-toggle .arrow-icon { transform: rotate(180deg); }
         .plan-toggle-input:checked + .plan-title-toggle + .plan-feature-content { display: block; }
+        /* Flashing registration notice below the main plans heading */
+        @keyframes main-plan-discount-blink {
+            0%, 100% { opacity: 1; box-shadow: 0 0 17px rgba(255, 193, 7, 0.32); }
+            50% { opacity: 0.45; box-shadow: 0 0 3px rgba(255, 193, 7, 0.05); }
+        }
+        .main-plan-discount-notice {
+            display: block;
+            max-width: 720px;
+            margin: 22px auto 0;
+            padding: 15px 18px;
+            border: 2px solid #ffd54a;
+            border-radius: 14px;
+            background: rgba(255, 193, 7, 0.13);
+            color: #ffe37b;
+            font-family: 'Vazirmatn', sans-serif;
+            font-size: clamp(1.05rem, 2.4vw, 1.55rem);
+            line-height: 1.9;
+            font-weight: 800;
+            text-align: center;
+            animation: main-plan-discount-blink 1.15s ease-in-out infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .main-plan-discount-notice { animation: none; }
+        }
     </style>
 </head>
 <body>
@@ -379,6 +403,7 @@
         <div class="section-divider">
             <h2><span class="animated-emoji trophy">🏆</span>طرح‌های اصلی</h2>
             <p>جامع‌ترین و کامل‌ترین سطح از خدمات آکادمی برای داوطلبانی که به چیزی جز بهترین‌ها فکر نمی‌کنند.</p>
+            <div class="main-plan-discount-notice" role="status">ثبت‌نام با تخفیف ۴۸٪ تا ساعت ۲۴ روز پنجشنبه ۳۰ مهر</div>
         </div>
 
         <div class="pricing-container">
@@ -403,19 +428,19 @@
                         <div class="multi-price-title">شهریه ماهیانه طرح جامع به تفکیک رشته و مقطع:</div>
                         <div class="multi-price-item">
                             <span>🔬 تجربی (تمامی مقاطع)</span>
-                            <span>۱,۳۰۰,۰۰۰ <small>تومان</small></span>
+                            <span>۱,۰۰۰,۰۰۰ <small>تومان</small></span>
                         </div>
                         <div class="multi-price-item">
                             <span>📐 ریاضی (تمامی مقاطع)</span>
-                            <span>۱,۳۵۰,۰۰۰ <small>تومان</small></span>
+                            <span>۱,۰۰۰,۰۰۰ <small>تومان</small></span>
                         </div>
                         <div class="multi-price-item">
                             <span>🎨 هنر (تمامی مقاطع)</span>
-                            <span>۱,۴۰۰,۰۰۰ <small>تومان</small></span>
+                            <span>۱,۱۰۰,۰۰۰ <small>تومان</small></span>
                         </div>
                         <div class="multi-price-item">
                             <span>📚 انسانی (تمامی مقاطع)</span>
-                            <span>۱,۴۵۰,۰۰۰ <small>تومان</small></span>
+                            <span>۱,۲۰۰,۰۰۰ <small>تومان</small></span>
                         </div>
                     </div>
                     
