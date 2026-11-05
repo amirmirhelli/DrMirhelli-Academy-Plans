@@ -274,6 +274,9 @@
         .addon-subtitle { font-size: 1.1rem; color: var(--text-color-secondary); margin-top: 0; margin-bottom: 30px; }
         .addon-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px 30px; text-align: right; }
         .addon-list > .addon-item:nth-child(-n+5) { grid-column: 1 / -1; }
+        .addon-list > .addon-bundle-note { grid-column: 1 / -1; }
+        .addon-list > .addon-item:nth-child(n+7) { grid-column: 1 / -1; }
+        .addon-bundle-note { padding: 13px 16px; text-align: center; color: var(--accent-gold); font-weight: 800; font-size: 1.05rem; background: rgba(212, 175, 55, 0.08); border: 1px solid var(--accent-gold-border); border-radius: 10px; }
         .addon-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 10px; border-bottom: 1px solid rgba(224, 224, 224, 0.1); }
         .addon-item span:first-child { font-weight: 700; flex-grow: 1; display: inline-flex; align-items: center; }
         .addon-price-button-group { display: flex; align-items: center; gap: 15px; flex-shrink: 0; color: var(--text-color-secondary); }
@@ -403,7 +406,6 @@
         <div class="section-divider">
             <h2><span class="animated-emoji trophy">🏆</span>طرح‌های اصلی</h2>
             <p>جامع‌ترین و کامل‌ترین سطح از خدمات آکادمی برای داوطلبانی که به چیزی جز بهترین‌ها فکر نمی‌کنند.</p>
-            <div class="main-plan-discount-notice">ثبت‌نام با تخفیف ۴۸٪ تا ساعت ۲۴ روز پنجشنبه ۱۴ آبان</div>
         </div>
 
         <div class="pricing-container">
@@ -428,19 +430,19 @@
                         <div class="multi-price-title">شهریه ماهیانه طرح جامع به تفکیک رشته و مقطع:</div>
                         <div class="multi-price-item">
                             <span>🔬 تجربی (تمامی مقاطع)</span>
-                            <span>۱,۰۰۰,۰۰۰ <small>تومان</small></span>
+                            <span>۱,۳۰۰,۰۰۰ <small>تومان</small></span>
                         </div>
                         <div class="multi-price-item">
                             <span>📐 ریاضی (تمامی مقاطع)</span>
-                            <span>۱,۰۰۰,۰۰۰ <small>تومان</small></span>
+                            <span>۱,۳۵۰,۰۰۰ <small>تومان</small></span>
                         </div>
                         <div class="multi-price-item">
                             <span>🎨 هنر (تمامی مقاطع)</span>
-                            <span>۱,۱۰۰,۰۰۰ <small>تومان</small></span>
+                            <span>۱,۴۰۰,۰۰۰ <small>تومان</small></span>
                         </div>
                         <div class="multi-price-item">
                             <span>📚 انسانی (تمامی مقاطع)</span>
-                            <span>۱,۲۰۰,۰۰۰ <small>تومان</small></span>
+                            <span>۱,۴۵۰,۰۰۰ <small>تومان</small></span>
                         </div>
                     </div>
                     
@@ -503,7 +505,7 @@
                 <div class="addon-item"><span>کلاس تحلیل آزمون هوشمند</span><div class="addon-price-button-group"><span>۳۵۰,۰۰۰ تومان / ماهیانه</span></div></div>
                 <div class="addon-item"><span>کلاس روش مطالعه</span><div class="addon-price-button-group"><span>۴۰۰,۰۰۰ تومان / ماهیانه</span></div></div>
                 <div class="addon-item"><span>کلاس مدیریت انگیزه و هیجان</span><div class="addon-price-button-group"><span>۴۰۰,۰۰۰ تومان / ماهیانه</span></div></div>
-                <div class="addon-item" style="grid-column: 1 / -1;"><span>هر ۵ تا کلاس باهم</span><div class="addon-price-button-group"><span>۱,۵۰۰,۰۰۰ تومان / ماهیانه</span></div></div>
+                <div class="addon-bundle-note">هر ۵ تا کلاس باهم: ۱,۵۰۰,۰۰۰ تومان / ماهیانه</div>
                 <div class="addon-item"><span>پانسیون مطالعاتی آنلاین</span><div class="addon-price-button-group"><span>۷۰۰,۰۰۰ تومان / ماهیانه</span></div></div>
                 <div class="addon-item"><span>نظارت VIP در طول روز با پشتیبان</span><div class="addon-price-button-group"><span>۱,۰۰۰,۰۰۰ تومان / ماهیانه</span></div></div>
                 <div class="addon-item"><span>تحلیل اختصاصی آزمون با پشتیبان</span><div class="addon-price-button-group"><span>۷۰۰,۰۰۰ تومان / ماهیانه</span></div></div>
